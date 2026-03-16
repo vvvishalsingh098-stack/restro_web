@@ -1,0 +1,154 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 1rem 0;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffc107; /* Bootstrap warning color on hover */
+}
+
+.navbar-dark .navbar-nav .active > .nav-link {
+    color: #ffc107; /* Warning color for active link */
+}
+
+.logo-img {
+    height: 30px; /* Adjust logo size as needed */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background: url('../images/hero-background.jpg') no-repeat center center/cover; /* Replace with your image path */
+    min-height: 80vh; /* Minimum height of the hero section */
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+}
+
+.hero-section .container {
+    position: relative; /* To ensure content is above the overlay */
+    z-index: 1;
+}
+
+/* Menu Section Styles */
+#menu .card {
+    border: none;
+    border-radius: 8px;
+}
+
+#menu .card-img-top {
+    border-radius: 8px 8px 0 0;
+    height: 200px; /* Fixed height for menu images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+#menu .card-title {
+    color: #d9534f; /* A shade of red for emphasis */
+}
+
+/* About Us Section Styles */
+#about img {
+    filter: grayscale(10%) brightness(90%); /* Slightly desaturated and dimmed */
+}
+
+/* Order Section Styles */
+#order {
+    background-color: #212529; /* Dark background */
+}
+
+#order .form-control {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+#order .form-label {
+    color: #fff;
+}
+
+#order .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#order .btn-warning {
+    border-color: #ffc107;
+}
+
+/* Contact Section Styles */
+#contact .card-body {
+    background-color: #f8f9fa; /* Light background for contact cards */
+}
+
+.map-container {
+    overflow: hidden;
+    position: relative;
+    padding-top: 56.25%; /* Aspect ratio for 16:9 */
+}
+
+.map-container iframe {
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #212529;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffc107 !important;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 992px) {
+    .navbar {
+        padding: 1.5rem 0; /* Slightly more padding on larger screens */
+    }
+    .hero-section {
+        min-height: 90vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+}
